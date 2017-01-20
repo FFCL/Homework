@@ -49,14 +49,24 @@ namespace Homework_02
             while (user != "admin" && pas != "888888");
             Console.WriteLine("Welcome!");
             Console.ReadKey();
-
-            #endregion
             */
             #endregion
 
             #region//第三题（？）
             /*
-
+            int sum = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                sum += i;
+                Console.WriteLine("现在是第{0}个数，累加值是{1}",i,sum);
+                if (sum> 20)
+                {
+                    Console.WriteLine("累加值大于20，输出");
+                    break;
+                }
+            }
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
             */
             #endregion
 
@@ -184,7 +194,7 @@ namespace Homework_02
                 if (a>9)
                 {
                     b++;
-                    a = 0;
+                    a = 1;
                     if (b>9)
                     {
                         c++;
@@ -204,38 +214,130 @@ namespace Homework_02
             #endregion
 
             #region//第十一题
-
+            /*
             int min = 101;
             int max = 200;
             int mod = 0;
             int d = 0;//质数
-            int e = 0;//被膜掉的个数
             for (int i = min; i <= max; i++)
             {
-                for (int j = 2; j <= 19; j++)
+                int e = 0;
+                for (int j = 2; j < i; j++)
                 {
                     mod = i % j;
                     if (mod != 0)
                     {
                         e++;
-                        if (e==18)
+                        if (e == i - 2)
                         {
-                            Console.WriteLine(i+"是质数");
+                            Console.WriteLine(i + "是质数");
                             d++;
                         }
                     }
-                    
                 }
-                e = 0;
+                int e = 0;
             }
             Console.WriteLine("一共有{0}个质数", d);
-
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+            */
             #endregion
 
             #region//第十二题
+            /*
+            int t = 7;
+            int k = 1;
+            int sum = 0;
+            while ((t * k) < 100)
+            {
+                sum += (k * t);
+                k++;
+                
+            }
+            Console.WriteLine("100以内{0}的倍数之和为{1}", t, sum);
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+            */
+            #endregion
 
-            //太简单，不做
+            #region//第十三题
+            /*
+            int min = 1;
+            int max = 1000;
+            int sum = 0;
+            for (int i = min; i <= max; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    sum += i;
+                }
+                else
+                {
+                    ; ;
+                }
+            }
+            Console.WriteLine("{0}-{1}之间所有的奇数之和为{2}", min, max, sum);
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+            */
+            #endregion
 
+            #region//第十四题
+            /*
+            Random r = new Random();
+            int a = r.Next(1, 100);
+            int guess;
+            int i = 0;
+            Console.WriteLine("我们随机生成了一个数，你猜猜是多少？");
+            do
+            {
+                guess = Convert.ToInt32(Console.ReadLine());
+                i++;
+                if (guess>a)
+                {
+                    Console.WriteLine("猜大了！");
+                }
+                if (guess<a)
+                {
+                    Console.WriteLine("猜小了！");
+                }
+            } while (guess != a);
+            Console.WriteLine("你猜对了！一共猜了{0}次",i);
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+            */
+            #endregion
+
+            #region//第十五题
+            /*
+            string account;
+            string password;
+            int t = 0;
+            for (int i = 1; i <= 3; i++)
+            {
+                t++;
+                Console.WriteLine("第{0}次尝试！", t);
+                Console.WriteLine("Please Input Username!");
+                account = Console.ReadLine();
+                Console.WriteLine("Please Input Password");
+                password = Console.ReadLine();
+                if (account == "FFCL" && password == "888888")
+                {
+                    Console.WriteLine("登陆成功！");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("错误！");
+                }
+            }
+            if (t >= 3)
+            {
+                Console.WriteLine("你TM是谁？来自哪里？为什么登陆？");
+            }
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+            */
             #endregion
         }
 

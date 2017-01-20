@@ -16,8 +16,6 @@ namespace Homework
             string Username = Console.ReadLine();
             Console.WriteLine("Please Input Password");
             string Password = Console.ReadLine();
-            Console.WriteLine("Sending to the system...\n");
-            System.Threading.Thread.Sleep(1500);
             if (Username == "admin")
             {
                 if (Password == "888888")
@@ -38,7 +36,6 @@ namespace Homework
                 else
                 {
                     Console.WriteLine("ALL ERROR!\n");
-                    System.Threading.Thread.Sleep(500);
                     Console.WriteLine("Who The Hell Are You?!\n");
                 }
             }
@@ -61,7 +58,7 @@ namespace Homework
             }
             else
             {
-                Console.WriteLine("Go on?\nPress 'YES' to continue");
+                Console.WriteLine("Go on?\nPress 'YES'（大写的） to continue");
                 string input_YN = Console.ReadLine();
                 if (input_YN == "YES")
                 {
@@ -82,16 +79,16 @@ namespace Homework
             Console.WriteLine("Please input a character");
             string ii = Convert.ToString(Console.ReadLine());
             char i = Convert.ToChar(ii);
-        
-            if (i>=48 && i<=57)
+
+            if (i >= 48 && i <= 57)
             {
                 Console.WriteLine("This is 数字");
             }
-            else if (i>=65 && i<=90)
+            else if (i >= 65 && i <= 90)
             {
                 Console.WriteLine("This is 大写字母");
             }
-            else if (i>=97 && i<=122)
+            else if (i >= 97 && i <= 122)
             {
                 Console.WriteLine("This is 小写字母");
             }
@@ -108,24 +105,24 @@ namespace Homework
             /*
             Console.WriteLine("Please input your score!");
             string score_input = Console.ReadLine();
-            int score = Convert.ToInt32(score_input);
-            if (score>=90 && score<=100)
+            double score = Convert.ToDouble(score_input);
+            if (score >= 90 && score <= 100)
             {
                 Console.WriteLine("A");
             }
-            else if (score>=80 && score<90)
+            else if (score >= 80 && score < 90)
             {
                 Console.WriteLine("B");
             }
-            else if (score>=70 && score<80)
+            else if (score >= 70 && score < 80)
             {
                 Console.WriteLine("C");
             }
-            else if (score>=60 && score<70)
+            else if (score >= 60 && score < 70)
             {
                 Console.WriteLine("D");
             }
-            else if (score<60 && score>=0)
+            else if (score < 60 && score >= 0)
             {
                 Console.WriteLine("E");
             }
@@ -173,7 +170,7 @@ namespace Homework
             }
             if (eat >= 10)
             {
-                Console.WriteLine("什么鬼玩意！退货！");
+                Console.WriteLine("卧槽！{0}个坏蛋！什么鬼玩意！退货！",bad_egg);
             }
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
@@ -253,7 +250,7 @@ namespace Homework
             #endregion
 
             #region//第十一题
-
+            /*
             Console.WriteLine("Please input a");
             double a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Please input b");
@@ -268,6 +265,7 @@ namespace Homework
             }
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
+            */
             #endregion
         }
     }
