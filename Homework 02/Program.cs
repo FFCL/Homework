@@ -71,7 +71,7 @@ namespace Homework_02
             #endregion
 
             #region//第四题
-            /*
+            
             int f = 0;
             for (int i = 1; i <= 100; i++)
             {
@@ -90,7 +90,7 @@ namespace Homework_02
             Console.WriteLine(ff);
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
-            */
+            
             #endregion
 
             #region//第五题

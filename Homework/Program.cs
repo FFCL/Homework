@@ -189,27 +189,24 @@ namespace Homework
             #endregion
 
             #region//第八题
-            /*
+
             Console.WriteLine("Please input a year!");
-            int y = Convert.ToInt32 (Console.ReadLine());
-            if ((y%400) == 0)
+            int y = Convert.ToInt32(Console.ReadLine());
+            if ((y % 400) == 0)
+            {
+                Console.WriteLine("是闰年！");
+            }
+            else if (((y % 4) == 0) && ((y % 100) != 0))
             {
                 Console.WriteLine("是闰年！");
             }
             else
             {
-                if (((y%4) == 0) && ((y%100) != 0))
-                {
-                    Console.WriteLine("是闰年！");
-                }
-                else
-                {
-                    Console.WriteLine("不是闰年！");
-                }
+                Console.WriteLine("不是闰年！");
             }
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
-            */
+
             #endregion
 
             #region//第九题
@@ -267,6 +264,10 @@ namespace Homework
             Console.ReadKey();
             */
             #endregion
+
+            int a = 100;
+            double b = a / 23.0;
+            Console.WriteLine(b);
         }
     }
 }
