@@ -71,7 +71,7 @@ namespace Homework_02
             #endregion
 
             #region//第四题
-            
+            /*
             int f = 0;
             for (int i = 1; i <= 100; i++)
             {
@@ -90,7 +90,7 @@ namespace Homework_02
             Console.WriteLine(ff);
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
-            
+            */
             #endregion
 
             #region//第五题
@@ -242,6 +242,63 @@ namespace Homework_02
             Console.ReadKey();
             */
             #endregion
+            #region//↑标准解
+            /*
+            Console.WriteLine("please input min");
+            int min = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("please input max");
+            int maxx = Convert.ToInt32(Console.ReadLine());
+            int j;
+            int tt = 0;
+            bool boo = true;
+            for (int i = min; i < maxx; i++)
+            {
+                boo = true;
+                for (j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        boo = false;
+                        break;
+                    }
+                }
+                if (boo)
+                {
+                    tt++;
+                    Console.WriteLine(i + "," + tt);
+                }
+            }
+            */
+            #endregion
+            #region//用while语句做
+            /*
+            int i = min;
+            bool boo = true;
+            do
+            {
+                boo = true;
+                j = 2;
+                do
+                {
+                    if (i % j == 0)
+                    {
+                        //不是素数
+                        boo = false;
+                        break;
+                    }
+                    j++;
+                }
+                while (i > j);
+                if (boo)
+                {
+                    tt++;
+                    Console.WriteLine(i+","+tt);
+                }
+                i++;
+            }
+            while (i >= min && i <= maxx) ;
+            */
+            #endregion
 
             #region//第十二题
             /*
@@ -257,6 +314,21 @@ namespace Homework_02
             Console.WriteLine("100以内{0}的倍数之和为{1}", t, sum);
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
+            */
+            #endregion
+            #region//重做
+            /*
+            int min = 1;
+            int maxx = 100;
+            int sum = 0;
+            for (int i = min; i <= maxx; i++)
+            {
+                if ((i % 7) == 0)
+                {
+                    sum += i;
+                    Console.WriteLine("{0}是7的倍数，现在结果是{1}",i,sum);
+                }
+            }
             */
             #endregion
 
@@ -281,11 +353,26 @@ namespace Homework_02
             Console.ReadKey();
             */
             #endregion
+            #region//重做
+            /*
+            int min = 1;
+            int maxx = 1000;
+            int sum = 0;
+            for (int i = min; i <= maxx; i++)
+            {
+                if ((i % 2) != 0)
+                {
+                    sum += i;
+                    Console.WriteLine("{0}是奇数，现在结果是{1}", i, sum);
+                }
+            }
+            */
+            #endregion
 
             #region//第十四题
             /*
             Random r = new Random();
-            int a = r.Next(1, 100);
+            int a = r.Next(1, (100+1));
             int guess;
             int i = 0;
             Console.WriteLine("我们随机生成了一个数，你猜猜是多少？");
@@ -305,6 +392,33 @@ namespace Homework_02
             Console.WriteLine("你猜对了！一共猜了{0}次",i);
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
+            */
+            #endregion
+            #region//重做
+            /*
+            Random random_i = new Random();
+            int randomNum = random_i.Next(1, (100+1));
+            int inputNum;
+            bool boo = true;
+            do
+            {
+                Console.WriteLine("Please input a number!");
+                inputNum = Convert.ToInt32(Console.ReadLine());
+                if (inputNum == randomNum)
+                {
+                    boo = false;
+                }
+                else if (inputNum >= randomNum)
+                {
+                    Console.WriteLine("Smaller than this");
+                }
+                else if (inputNum <= randomNum)
+                {
+                    Console.WriteLine("Bigger than this");
+                }
+            }
+            while (boo == true);
+            Console.WriteLine("YES!");
             */
             #endregion
 
@@ -339,8 +453,43 @@ namespace Homework_02
             Console.ReadKey();
             */
             #endregion
+            #region//重做
+
+            string userName = "admin";
+            string passWord = "888888";
+            int repeat = 0;
+            do
+            {
+                repeat++;
+                Console.WriteLine("The {0} chance!",repeat);
+                Console.WriteLine("Username?");
+                string input_username = Console.ReadLine();
+                Console.WriteLine("Password?");
+                string input_password = Console.ReadLine();
+                if (userName == input_username && passWord == input_password)
+                {
+                    Console.WriteLine("success!");
+                    break;
+                }
+                else if (userName == input_username)
+                {
+                    Console.WriteLine("password error!");
+                }
+                else if (passWord == input_password)
+                {
+                    Console.WriteLine("usermane error!");
+                }
+                else
+                {
+                    Console.WriteLine("ERROR!");
+                }
+                if (repeat == 3)
+                {
+                    Console.WriteLine("DIE!");
+                }
+            } while (repeat<=3);
+
+            #endregion
         }
-
-
     }
 }
