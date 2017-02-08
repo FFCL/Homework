@@ -326,17 +326,35 @@ namespace Homework_03
             #endregion
 
             #region//第十三题
-
+            /*
             Console.WriteLine("Please input the length");
-            
-
-            Console.WriteLine("Please input the {0} number");
-
+            int length = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[length];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Please input the {0} number",i+1);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            WhichIsBig(arr);
+        }
+        public static void WhichIsBig (int[] arr)
+        {
+            for (int i = 1; i < (arr.Length); i++)
+			{
+			    arr[i-1] = arr[i] > arr[i-1] ? arr[i] : arr[i-1];
+			}
+            Console.WriteLine("The Biggest is "+arr[arr.Length-1]);
+            */
             #endregion
 
             #region//第十四题
 
-
+            int[] arr = {12,425,254,32,1,865 };
+            List<int> list = new List<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                list.Add();
+            }
 
             #endregion
 
