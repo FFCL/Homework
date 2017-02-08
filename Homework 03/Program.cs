@@ -220,7 +220,7 @@ namespace Homework_03
             return count;
             */
             #endregion
-            
+
             #region//第十题
             /*
             Console.WriteLine("Please input Minimum!");
@@ -241,6 +241,115 @@ namespace Homework_03
             }
             return sum;
             */
+            #endregion
+
+            #region//第十一题(a ^ 3 + b ^ 3 + c ^ 3 = abc 水仙花数）
+            /*
+            List<int> arr = new List<int>();
+            int min = 100;
+            int max = 999;
+            int b = 0;
+            for (int i = min; i <= max; i++)
+            {
+                int bai = i / 100;
+                int shi = i % 100 / 10;
+                int ge = i % 100 % 10;
+                if (bai * bai * bai + shi * shi * shi + ge * ge * ge == i)
+                {
+                    List<int> arr = ToArray(i,b);
+                    b++;
+                }
+            }
+            for (int i = 0; i < arr.Count;i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            
+        }
+        public static int[] ToArray(int i,int b)
+        {
+            List<int> arr = new List<int>();
+            arr.Add(i);
+            return List < int > arr;
+            */
+            #endregion
+
+            #region//第十二题
+            /*
+            Console.WriteLine("Please input year!");
+            int year = Convert.ToInt32(Console.ReadLine());
+            CheckYourAnimals(year);
+        }
+        public static void CheckYourAnimals(int year)
+        {
+            year %= 12;
+            switch (year)
+            {
+                case 0:
+                    Console.WriteLine("猴");
+                    break;
+                case 1:
+                    Console.WriteLine("鸡");
+                    break;
+                case 2:
+                    Console.WriteLine("狗");
+                    break;
+                case 3:
+                    Console.WriteLine("猪");
+                    break;
+                case 4:
+                    Console.WriteLine("鼠");
+                    break;
+                case 5:
+                    Console.WriteLine("牛");
+                    break;
+                case 6:
+                    Console.WriteLine("虎");
+                    break;
+                case 7:
+                    Console.WriteLine("兔");
+                    break;
+                case 8:
+                    Console.WriteLine("龙");
+                    break;
+                case 9:
+                    Console.WriteLine("蛇");
+                    break;
+                case 10:
+                    Console.WriteLine("马");
+                    break;
+                case 11:
+                    Console.WriteLine("羊");
+                    break;
+            }
+            */
+            #endregion
+
+            #region//第十三题
+
+            Console.WriteLine("Please input the length");
+            
+
+            Console.WriteLine("Please input the {0} number");
+
+            #endregion
+
+            #region//第十四题
+
+
+
+            #endregion
+
+            #region//第十五题
+
+
+
+            #endregion
+
+            #region//第十六题
+
+
+
             #endregion
         }
     }
